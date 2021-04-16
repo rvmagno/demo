@@ -1,0 +1,20 @@
+
+
+CREATE TABLE IF NOT EXISTS cliente(
+
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  nome varchar(255),
+  nascimento TIMESTAMP,
+  celular BIGINT
+
+) ENGINE=INNODB;
+
+
+CREATE TABLE IF NOT EXISTS pet(
+
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  nome varchar(255),
+  raca varchar(255)
+
+) ENGINE=INNODB;
+
