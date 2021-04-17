@@ -1,11 +1,15 @@
 package com.petz.demo.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-@Data
+@Data @Builder @AllArgsConstructor @NoArgsConstructor
 @Entity
 @Table
 public class Cliente {
@@ -16,7 +20,7 @@ public class Cliente {
 
     private String nome;
 
-    private LocalDate nascimento;
+    private LocalDateTime nascimento;
 
     private Long celular;
 
