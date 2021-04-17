@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 public class ClienteService {
 
-    Logger logger = LoggerFactory.getLogger(getClass());
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired
     ClienteRepository repository;
@@ -59,6 +59,7 @@ public class ClienteService {
         Optional<Cliente> optCliente = repository.findById(idCliente);
         if(optCliente.isEmpty()){
             logger.info(String.format("Cliente [%s]  n encontrado", idCliente));
+            return;
         }
 
         repository.delete(optCliente.get());
